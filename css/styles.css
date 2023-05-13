@@ -1,0 +1,638 @@
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 35% 1fr;
+  margin-top: 13rem;
+  padding: 0 13.5rem;
+}
+@media only screen and (max-width: 50em) {
+  .about {
+    padding: 0 1.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45rem 1fr;
+    margin: 3rem;
+  }
+}
+.about__cover {
+  grid-column: 1/span 2;
+  grid-row: 1/-1;
+  z-index: 10;
+}
+@media only screen and (max-width: 50em) {
+  .about__cover {
+    width: 100%;
+  }
+}
+.about__text {
+  grid-column: 3/-1;
+  grid-row: 2;
+  z-index: 20;
+  padding-left: 6rem;
+  padding-top: 6.5rem;
+  background: #fff;
+}
+@media only screen and (max-width: 62.5em) {
+  .about__text {
+    padding: 0;
+    text-align: center;
+    padding-inline: 3rem;
+    padding-top: 3rem;
+  }
+}
+.about__text h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .about__text h2 {
+    font-size: 3.2rem;
+  }
+}
+.about__text p {
+  font-family: "Alata", sans-serif;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media only screen and (max-width: 62.5em) {
+  .about__text p {
+    font-size: 1.7rem;
+  }
+}
+
+.creations {
+  padding: 0 13.5rem;
+  max-width: 100vw;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-template-rows: 13rem repeat(2, 44.5rem);
+  grid-auto-rows: 35rem;
+  gap: 3rem;
+  justify-content: center;
+}
+@media only screen and (max-width: 50em) {
+  .creations {
+    padding: 0 1.3rem;
+    position: relative;
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 18rem) 5rem;
+    margin-top: 22rem;
+  }
+}
+.creations__heading {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 50em) {
+  .creations__heading {
+    justify-content: center;
+  }
+}
+.creations__heading h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+@media only screen and (max-width: 50em) {
+  .creations__heading h2 {
+    font-size: 3.6rem;
+  }
+}
+.creations__heading a:link,
+.creations__heading a:visited {
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  color: #000;
+  font-size: 1.8rem;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  border: 2px solid #000;
+  padding: 1.2rem 3rem;
+}
+@media only screen and (max-width: 50em) {
+  .creations__heading a:link,
+  .creations__heading a:visited {
+    position: absolute;
+    bottom: 5rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.creations__item--1 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--1:hover {
+  transform: scale(1.1);
+}
+.creations__item--2 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--2:hover {
+  transform: scale(1.1);
+}
+.creations__item--3 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--3:hover {
+  transform: scale(1.1);
+}
+.creations__item--4 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--4:hover {
+  transform: scale(1.1);
+}
+.creations__item--5 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--5:hover {
+  transform: scale(1.1);
+}
+.creations__item--6 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--6:hover {
+  transform: scale(1.1);
+}
+.creations__item--7 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--7:hover {
+  transform: scale(1.1);
+}
+.creations__item--8 {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.creations__item--8:hover {
+  transform: scale(1.1);
+}
+.creations__item--1 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--1 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-deep-earth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--1 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--1 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--2 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-night-arcade.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--2 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--2 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--3 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-soccer-team.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-soccer-team.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--3 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--3 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--4 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-grid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--4 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-grid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--4 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--4 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--5 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-from-above.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--5 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-from-above.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--5 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--5 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--6 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-pocket-borealis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--6 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-pocket-borealis.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--6 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--6 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--7 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-curiosity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--7 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-curiosity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--7 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--7 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__item--8 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/desktop/image-fisheye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .creations__item--8 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 2%, transparent), url("/images/mobile/image-fisheye.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.creations__item--8 h3 {
+  font-size: 3.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .creations__item--8 h3 {
+    font-size: 3.7rem;
+    max-width: 30%;
+  }
+}
+.creations__title {
+  color: #fff;
+}
+
+.header {
+  background-image: url(/images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 13.5rem;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+}
+@media only screen and (max-width: 50em) {
+  .header {
+    padding: 0 1.3rem;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .header__logo {
+    width: 15rem;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding-top: 5rem;
+}
+.header__nav__links {
+  display: flex;
+  list-style: none;
+  font-family: "Alata", sans-serif;
+}
+@media only screen and (max-width: 50em) {
+  .header__nav__links {
+    display: none;
+  }
+}
+.header__nav__link {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.header__nav__link:hover {
+  transform: translateY(-0.3rem);
+}
+.header__nav__link:not(:last-child) {
+  margin-right: 2rem;
+}
+.header__menu {
+  cursor: pointer;
+  margin-right: 3.5rem;
+}
+@media only screen and (min-width: 50em) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__heading {
+  border: 2px solid #fff;
+  font-size: 6rem;
+  padding: 2rem 2rem 2rem;
+  width: 45%;
+  margin-bottom: 5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+@media only screen and (max-width: 50em) {
+  .header__heading {
+    width: fit-content;
+    padding: 2rem;
+    padding-right: 0;
+    margin-right: 2rem;
+    margin-bottom: 22rem;
+    font-size: 5rem;
+    hyphens: auto;
+    max-width: 100vw;
+  }
+}
+
+.mobile__menu {
+  position: absolute;
+  left: 0;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  transition: transform 0.5s ease-out;
+  transform: translateX(-100%);
+  padding: 0 1.3rem;
+}
+.mobile__menu__header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile__menu__logo {
+  width: 15rem;
+  height: 3rem;
+}
+.mobile__menu__close {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 3.5rem;
+}
+.mobile__menu__links {
+  list-style: none;
+  margin-top: 15rem;
+}
+.mobile__menu__link {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-out;
+}
+.mobile__menu__link:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 50em) {
+  .mobile__menu {
+    display: none;
+  }
+}
+
+.footer {
+  padding: 0 13.5rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background: #000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-family: "Alata", sans-serif;
+  font-size: 1.6rem;
+}
+.footer__logo {
+  width: 16rem;
+}
+.footer__links {
+  grid-column: 1;
+  grid-row: 2;
+  list-style: none;
+  color: #fff;
+  display: flex;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  align-items: baseline;
+}
+.footer__link:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__social {
+  justify-self: end;
+  grid-row: 1;
+  grid-column: 2;
+}
+.footer__social > *:not(:last-child) {
+  margin-right: 0.8rem;
+}
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.6);
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: self-end;
+}
+@media only screen and (max-width: 50em) {
+  .footer {
+    height: 80vh;
+    padding: 9rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    font-size: 2rem;
+    justify-items: center;
+  }
+  .footer__logo {
+    width: 16rem;
+  }
+  .footer__links {
+    grid-row: 2;
+    font-size: 2rem;
+  }
+  .footer__social {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+  }
+  .footer__copyright {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

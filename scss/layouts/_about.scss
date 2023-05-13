@@ -1,0 +1,74 @@
+.about {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 35% 1fr;
+
+    margin-top: 13rem;
+
+    @include paddingDesktop;
+
+    @media only screen and (max-width: $bp-tablet) {
+        @include paddingMobile;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 45rem 1fr;
+
+        margin: 3rem;
+    }
+
+    &__cover {
+        grid-column: 1 / span 2;
+        grid-row: 1 /-1;
+        z-index: 10;
+
+        @media only screen and (max-width: $bp-tablet) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        grid-column: 3/-1;
+        grid-row: 2;
+        z-index: 20;
+
+        padding-left: 6rem;
+        padding-top: 6.5rem;
+
+        background: #fff;
+
+        @media only screen and (max-width: $bp-tablet-port) {
+            padding: 0;
+
+            text-align: center;
+
+            padding-inline: 3rem;
+            padding-top: 3rem;
+        }
+
+        & h2 {
+            font-family: $JosefinSans;
+            font-size: 4.3rem;
+            font-weight: 300;
+
+            text-transform: uppercase;
+
+            margin-bottom: 3rem;
+
+            @media only screen and (max-width: $bp-tablet-port) {
+                font-size: 3.2rem;
+            }
+        }
+
+        & p {
+            font-family: $Alata;
+            font-size: 1.6rem;
+
+            color: rgba(0, 0, 0, 0.6);
+
+            @media only screen and (max-width: $bp-tablet-port) {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}

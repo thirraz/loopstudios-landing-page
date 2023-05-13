@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-tablet) {
+        font-size: 50%;
+    }
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+$Alata: "Alata", sans-serif;
+$JosefinSans: "Josefin Sans", sans-serif;

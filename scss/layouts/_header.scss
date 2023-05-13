@@ -1,0 +1,159 @@
+.header {
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    color: #fff;
+
+    @include paddingDesktop;
+
+    @media only screen and (max-width: $bp-tablet) {
+        @include paddingMobile;
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    max-width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+
+    &__logo {
+        @media only screen and (max-width: $bp-tablet) {
+            width: 15rem;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        padding-top: 5rem;
+
+        &__links {
+            display: flex;
+            list-style: none;
+
+            font-family: $Alata;
+
+            @media only screen and (max-width: $bp-tablet) {
+                display: none;
+            }
+        }
+
+        &__link {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+            &:hover {
+                transform: translateY(-0.3rem);
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    &__menu {
+        cursor: pointer;
+        margin-right: 3.5rem;
+
+        @media only screen and (min-width: $bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__heading {
+        border: 2px solid #fff;
+        font-size: 6rem;
+
+        padding: 2rem 2rem 2rem;
+
+        width: 45%;
+
+        margin-bottom: 5rem;
+
+        // position: absolute;
+        // bottom: 12rem;
+
+        font-family: $JosefinSans;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        @media only screen and (max-width: $bp-tablet) {
+            width: fit-content;
+            padding: 2rem;
+            padding-right: 0;
+            margin-right: 2rem;
+            margin-bottom: 22rem;
+
+            font-size: 5rem;
+
+            hyphens: auto;
+
+            max-width: 100vw;
+        }
+    }
+}
+
+.mobile__menu {
+    position: absolute;
+    left: 0;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+    transition: transform 0.5s ease-out;
+    transform: translateX(-100%);
+
+    @include paddingMobile;
+
+    &__header {
+        width: 100%;
+        height: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 15rem;
+        height: 3rem;
+    }
+
+    &__close {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 3.5rem;
+    }
+
+    &__links {
+        list-style: none;
+
+        margin-top: 15rem;
+    }
+
+    &__link {
+        font-family: $JosefinSans;
+        font-size: 5rem;
+        text-transform: uppercase;
+
+        transition: transform 0.3s ease-out;
+    }
+
+    &__link:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (min-width: $bp-tablet) {
+        display: none;
+    }
+}

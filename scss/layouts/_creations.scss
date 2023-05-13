@@ -1,0 +1,197 @@
+.creations {
+    @include paddingDesktop;
+
+    max-width: 100vw;
+
+    padding-bottom: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-rows: 13rem repeat(2, 44.5rem);
+    grid-auto-rows: 35rem;
+    gap: 3rem;
+
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-tablet) {
+        @include paddingMobile;
+
+        position: relative;
+
+        padding: 5rem;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 18rem) 5rem;
+        margin-top: 22rem;
+    }
+
+    &__heading {
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-tablet) {
+            justify-content: center;
+        }
+
+        & h2 {
+            font-family: $JosefinSans;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 4rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                font-size: 3.6rem;
+                // transform: tkranslateX(50%);
+            }
+        }
+
+        & a:link,
+        a:visited {
+            text-transform: uppercase;
+            font-family: $Alata;
+            color: #000;
+            font-size: 1.8rem;
+
+            text-decoration: none;
+
+            letter-spacing: 0.3rem;
+
+            border: 2px solid #000;
+
+            padding: 1.2rem 3rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                position: absolute;
+                bottom: 5rem;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &__item {
+        @for $i from 1 through 8 {
+            &--#{$i} {
+                cursor: pointer;
+                transition: transform 0.2s ease-out;
+            }
+
+            &--#{$i}:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &--1 {
+            @include bgMixin("/images/desktop/image-deep-earth.jpg");
+
+            width: auto;
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-deep-earth.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--2 {
+            @include bgMixin("/images/desktop/image-night-arcade.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-night-arcade.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--3 {
+            @include bgMixin("/images/desktop/image-soccer-team.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-soccer-team.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--4 {
+            @include bgMixin("/images/desktop/image-grid.jpg");
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-grid.jpg");
+            }
+
+            position: relative;
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--5 {
+            @include bgMixin("/images/desktop/image-from-above.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-from-above.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--6 {
+            @include bgMixin("/images/desktop/image-pocket-borealis.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-pocket-borealis.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--7 {
+            @include bgMixin("/images/desktop/image-curiosity.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-curiosity.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+        &--8 {
+            @include bgMixin("/images/desktop/image-fisheye.jpg");
+
+            position: relative;
+
+            @media only screen and (max-width: $bp-tablet) {
+                @include bgMixin("/images/mobile/image-fisheye.jpg");
+            }
+
+            & h3 {
+                @include headingCardPosition;
+            }
+        }
+    }
+
+    &__title {
+        color: #fff;
+    }
+}
